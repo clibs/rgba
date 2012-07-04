@@ -1,7 +1,7 @@
 
 # rgba.c
 
-  RGBA parsing / stringification.
+  RGB / RGBA parsing / formatting.
 
 ## API
 
