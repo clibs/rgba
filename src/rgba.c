@@ -251,16 +251,16 @@ rgba_new(uint32_t rgba) {
 void
 rgba_to_string(rgba_t rgba, char *buf, size_t len) {
   if (1 == rgba.a) {
-    snprintf(buf, len, "#%.2x%.2x%.2x"
-      , (int) (rgba.r * 255)
-      , (int) (rgba.g * 255)
-      , (int) (rgba.b * 255));
+    snprintf(buf, len, "#%.2x%.2x%.2x",
+      (int) (rgba.r * 255),
+      (int) (rgba.g * 255),
+      (int) (rgba.b * 255));
   } else {
-    snprintf(buf, len, "rgba(%d, %d, %d, %.2f)"
-      , (int) (rgba.r * 255)
-      , (int) (rgba.g * 255)
-      , (int) (rgba.b * 255)
-      , rgba.a);
+    snprintf(buf, len, "rgba(%d, %d, %d, %.2f)",
+      (int) (rgba.r * 255),
+      (int) (rgba.g * 255),
+      (int) (rgba.b * 255),
+      rgba.a);
   }
 }
 
@@ -293,10 +293,9 @@ rgba_from_rgb(uint8_t r, uint8_t g, uint8_t b) {
 static uint32_t
 rgba_from_hex6_string(const char *str) {
   return rgba_from_rgb(
-      (h(str[0]) << 4) + h(str[1])
-    , (h(str[2]) << 4) + h(str[3])
-    , (h(str[4]) << 4) + h(str[5])
-    );
+    (h(str[0]) << 4) + h(str[1]),
+    (h(str[2]) << 4) + h(str[3]),
+    (h(str[4]) << 4) + h(str[5]));
 }
 
 /*
@@ -306,10 +305,9 @@ rgba_from_hex6_string(const char *str) {
 static int32_t
 rgba_from_hex3_string(const char *str) {
   return rgba_from_rgb(
-      (h(str[0]) << 4) + h(str[0])
-    , (h(str[1]) << 4) + h(str[1])
-    , (h(str[2]) << 4) + h(str[2])
-    );
+    (h(str[0]) << 4) + h(str[0]),
+    (h(str[1]) << 4) + h(str[1]),
+    (h(str[2]) << 4) + h(str[2]));
 }
 
 /*
@@ -427,10 +425,9 @@ rgba_from_string(const char *str, short *ok) {
 
 void
 rgba_inspect(uint32_t rgba) {
-  printf("rgba(%d,%d,%d,%d)\n"
-    , rgba >> 24 & 0xff
-    , rgba >> 16 & 0xff
-    , rgba >> 8 & 0xff
-    , rgba & 0xff
-    );
+  printf("rgba(%d,%d,%d,%d)\n",
+    rgba >> 24 & 0xff,
+    rgba >> 16 & 0xff,
+    rgba >> 8 & 0xff,
+    rgba & 0xff);
 }
