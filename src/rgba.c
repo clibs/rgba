@@ -410,12 +410,9 @@ rgba_from_name_string(const char *str, short *ok) {
 
 uint32_t
 rgba_from_string(const char *str, short *ok) {
-  if ('#' == str[0]) 
-    return rgba_from_hex_string(++str, ok);
-  if (str == strstr(str, "rgba"))
-    return rgba_from_rgba_string(str, ok);
-  if (str == strstr(str, "rgb"))
-    return rgba_from_rgb_string(str, ok);
+  if ('#' == str[0])  return rgba_from_hex_string(++str, ok);
+  if (str == strstr(str, "rgba")) return rgba_from_rgba_string(str, ok);
+  if (str == strstr(str, "rgb")) return rgba_from_rgb_string(str, ok);
   return rgba_from_name_string(str, ok);
 }
 
