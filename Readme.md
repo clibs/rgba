@@ -3,6 +3,10 @@
 
   RGB / RGBA parsing / formatting.
 
+## Installation
+
+    $ cpm install visionmedia/rgba.c
+
 ## API
 
 ```c

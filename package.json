@@ -1,0 +1,9 @@
+{
+  "name": "rgba¸",
+  "version": "0.0.1",
+  "repo": "visionmedia/rgba.c",
+  "description": "RGB / RGBA parsing and formatting functions",
+  "keywords": ["color", "rgb", "rgba", "parse", "formatter"],
+  "license": "MIT",
+  "src": ["src/rgba.c", "src/rgba.h"]
+}
