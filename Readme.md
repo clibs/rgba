@@ -1,11 +1,15 @@
 
-# rgba.c
+# rgba
 
   RGB / RGBA parsing / formatting.
 
 ## Installation
 
-    $ cpm install visionmedia/rgba.c
+  Install with [clib](https://github.com/clibs/clib):
+
+```
+$ clib install clibs/rgba
+```
 
 ## API
 
@@ -25,5 +29,4 @@ rgba_to_string(rgba_t rgba, char *buf, size_t len);
 
 void
 rgba_inspect(uint32_t rgba);
-
 ```
